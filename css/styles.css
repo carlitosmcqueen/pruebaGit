@@ -1,0 +1,76 @@
+* {
+    /* siempre poner esto */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+.grilla {
+    display: grid;
+    /* VW para ancho */
+    grid-template-columns: 1fr 3fr;
+    /* VH para altura */
+    grid-template-rows: repeat(4, 25vh);
+    /* FR para separar mediante fracciones para q sea mas facil
+    mas rapido si hay que poner muchas filas o columnas grid-template- columns : repeat (3,3fr) */
+    grid-template-areas:
+        "nav header header header"
+        "nav section1 section1 aside"
+        "nav section2 section2 aside"
+        ". footer footer footer"
+    ;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+}
+
+.padreGrid {
+    color : white;
+    display: grid;
+    grid-template-columns: auto auto;
+    /* lo mismo que 1fr 1fr o repeat(2, auto)*/
+    grid-template-rows: 50%;
+    height: 100%;
+    width: 100%;
+    row-gap: 10px;
+    column-gap: 10px;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+/* poner grid-area con su nombre MUY IMPORTANTE */
+
+.header {
+    background-color: red;
+    grid-area: header;
+}
+
+.nav {
+    background-color: green;
+    grid-area: nav;
+
+
+}
+
+.section1 {
+    background-color: darkblue;
+    grid-area: section1;
+}
+
+.section2 {
+
+    background-color: fuchsia;
+    grid-area: section2;
+}
+
+.aside {
+
+    background-color: chartreuse;
+    grid-area: aside;
+}
+
+.footer {
+    background-color: coral;
+    grid-area: footer;
+}
